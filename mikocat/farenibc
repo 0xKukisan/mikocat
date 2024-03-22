@@ -1,0 +1,26 @@
+def celsius_ke_fahrenheit(celsius):
+    return (celsius * 9/5) + 32
+
+def fahrenheit_ke_celsius(fahrenheit):
+    return (fahrenheit - 32) * 5/9
+
+def main():
+    print("Program Konversi Suhu")
+    print("======================")
+    print("1. Celsius ke Fahrenheit")
+    print("2. Fahrenheit ke Celsius")
+    pilihan = int(input("Masukkan pilihan (1/2): "))
+
+    if pilihan == 1:
+        celsius = float(input("Masukkan suhu dalam Celsius: "))
+        fahrenheit = celsius_ke_fahrenheit(celsius)
+        print(f"Suhu dalam Fahrenheit: {fahrenheit} F")
+    elif pilihan == 2:
+        fahrenheit = float(input("Masukkan suhu dalam Fahrenheit: "))
+        celsius = fahrenheit_ke_celsius(fahrenheit)
+        print(f"Suhu dalam Celsius: {celsius} C")
+    else:
+        print("Pilihan tidak valid.")
+
+if __name__ == "__main__":
+    main()
